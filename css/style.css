@@ -1,0 +1,74 @@
+/* aplicando css global */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+/* aplicando css al encabezado */
+
+#logo {
+	width: 50%;
+	margin: auto;
+	padding-top: 0.8rem;
+}
+
+#menu {
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+
+/* aplicando comportamiento responsive */
+
+/* // Medium devices (tablets, 768px and up) */
+@media(min-width: 768px) {
+	/* aplicando css al encabezado */
+	header {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		align-items: center;
+	}
+	#menu {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+	}
+	#opcionesIzquierdo {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	#opcionesDerecho {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	/* aplicando css a productos */
+	#productos {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	h2 {
+		margin: 1rem;
+	}
+	#galeria {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		margin: 1rem;
+	}
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	#galeria {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
